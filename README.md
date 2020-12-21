@@ -1,1 +1,2 @@
-docker build -t go-plugins . && docker run -v C:\Users\mengchao.lv1\go\src\go-plugins-sample\out:/go/src/out go-plugins 
+docker build -t go-plugins . && docker run -v /tmp/go-plugins/out:/go/src/out go-plugins 
+
