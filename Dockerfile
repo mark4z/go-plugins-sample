@@ -1,14 +1,13 @@
-FROM golang:latest
+FROM golang:1.14
 
 ENV HOME /go/src
+ENV GOPROXY https://goproxy.cn
 
 WORKDIR ${HOME}
 
 COPY . ${HOME}
 
 CMD go version\
-&& go env -w GOPROXY=https://goproxy.cn\
-&& go build -o out -buildmode=plugin ${HOME}/plugins/simple/*.go\
-&& go build -o out -buildmode=plugin ${HOME}/plugins/hello-world/*.go\
+&& go build -o out -v -buildmode=plugin ${HOME}/plugins/simple/*.go\
+#&& go build -o out -buildmode=plugin ${HOME}/plugins/hello-world/*.go\
 && echo "build sucessful!\n"\
-&& go run i.go
