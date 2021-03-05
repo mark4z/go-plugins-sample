@@ -2,6 +2,4 @@ module github.com/mark4z/go-plugins-sample
 
 go 1.14
 
-require (
-	github.com/dubbogo/dubbo-go-proxy-filter v0.1.0-rc1.0.20210120132524-c63f4eb13725 //TODO
-)
+require github.com/mark4z/go-plugins-server v0.0.4 // indirect
